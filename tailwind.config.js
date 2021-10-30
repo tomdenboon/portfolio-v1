@@ -16,6 +16,8 @@ module.exports = {
   },
   variants: {
     extend: {
+      opacity: ['active'],
+      textColor: ['active'],
       translate: ['group-hover'],
       borderRadius: ['hover', 'focus'],
     },

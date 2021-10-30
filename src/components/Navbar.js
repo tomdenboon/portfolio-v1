@@ -13,10 +13,10 @@ class Navbar extends Component {
                     Tom
                 </div>
                 <div className="flex items-center">
-                    <NavbarItem>Resume</NavbarItem>
-                    <NavbarItem>Contact</NavbarItem>
-                    <NavbarItem>Projects</NavbarItem>
-                    <NavbarItem>Home</NavbarItem>
+                    <NavbarItem routeName="/resume">Resume</NavbarItem>
+                    <NavbarItem routeName="/contact">Contact</NavbarItem>
+                    <NavbarItem routeName="/projects">Projects</NavbarItem>
+                    <NavbarItem routeName="/">Home</NavbarItem>
                 </div>
             </div>
           );

@@ -1,7 +1,6 @@
-class Timer{
-    constructor(name){
+export default class Timer{
+    constructor(name, time){
         this.name = name;
-        this.time = 0;
-        this.isRunning = true;
+        this.time = time;
     }
 }

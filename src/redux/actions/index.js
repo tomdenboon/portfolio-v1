@@ -1,8 +1,8 @@
 export const SET_TIMER = 'SET_TIMER'
-export const setTimer = (timer) => {
+export const setTimer = (name, time) => {
   return {
     type: SET_TIMER,
-    payload: { timer }
+    payload: { name, time }
   }
 }
 

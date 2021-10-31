@@ -8,8 +8,7 @@ const timerReducer = (state = null, action) => {
       // Add a new timer, return a copy of state
       return new Timer(action.payload.name, action.payload.time)
     case UPDATE:
-      state.time += action.payload.deltaTime
-      return state;
+      return { ...state, time: state.time += action.payload.deltaTime }
     default:
       return state;
   }

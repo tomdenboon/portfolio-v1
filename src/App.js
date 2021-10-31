@@ -1,11 +1,12 @@
 import React from 'react';  
-import Home from './components/Home';
 import Navbar from './components/Navbar';
 import {
   BrowserRouter as Router,
   Switch,
   Route,
 } from "react-router-dom";
+import Home from './components/Home';
+import Projects from './components/Projects';
 
 function App() {
   return (
@@ -13,8 +14,14 @@ function App() {
       <div className="flex flex-col">
         <Navbar />
         <Switch>
-          <Route path="/">
+          <Route exact path="/">
             <Home />
+          </Route>
+          <Route path="/projects">
+            <Projects />
+          </Route>
+          <Route path="/contact">
+            <Projects />
           </Route>
         </Switch>
       </div>

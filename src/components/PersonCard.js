@@ -3,6 +3,8 @@ import { useSelector } from 'react-redux';
 import CustomButton1 from './CustomButton1';
 import { formatTime } from '../utils'
 import { FaGrin, FaGrinWink, FaGithub } from 'react-icons/fa'
+import { Link } from 'react-router-dom'
+
 
 function PersonCard() {
     const [isHoveredSmiley, setIsHoveredSmiley] = useState(false);
@@ -25,9 +27,11 @@ function PersonCard() {
                 <div className="text-lg text-green-700 font-mono font-black mt-5">
                     Software Developer
                 </div>
-                <div className="flex mt-5 text-4xl hover:text-gray-400 cursor-pointer select-none">
-                    <FaGithub />
-                </div>
+                <a href="https://github.com/tomdenboon" target="_blank" rel="noreferrer">
+                    <div className="flex mt-5 text-4xl hover:text-gray-400 cursor-pointer select-none">
+                        <FaGithub />
+                    </div>
+                </a>
             </div>
             <div className="relative w-2/3 h-full flex flex-col justify-between items-center p-5">
                 <div className="flex flex-col text-7xl font-bold pt-2">
@@ -49,8 +53,12 @@ function PersonCard() {
                     </div>
                 </div>
                 <div className="flex">
-                    <CustomButton1 content="Projects"/>
-                    <CustomButton1 content="Resume"/>
+                    <Link to="/project">
+                        <CustomButton1 content="Projects"/>
+                    </Link>
+                    <Link to="/resume">
+                        <CustomButton1 content="Resume"/>
+                    </Link>
                 </div>
                 <div className="flex transform translate-x-1/2 translate-y-1/2 rotate-90 -right-4 bottom-1/2 absolute text-green-700 font-bold font-mono text-3xl select-none">
                     {formatTime(timer.time)}

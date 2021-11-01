@@ -29,7 +29,7 @@ function PersonCardLeft() {
         Software Developer
       </div>
       <a href="https://github.com/tomdenboon" target="_blank" rel="noreferrer">
-        <div className="flex text-2xl mt-5 hover:text-green-600 cursor-pointer select-none">
+        <div className="flex text-2xl mt-5 hover:text-green-700 cursor-pointer select-none">
           <FiGithub />
         </div>
       </a>

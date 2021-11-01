@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { FiChevronLeft, FiChevronRight } from "react-icons/fi";
 import { NavLink } from "react-router-dom";
 import { withRouter } from "react-router-dom";
 
@@ -22,11 +22,11 @@ function NavbarItem(props) {
     <NavLink
       to={props.routeName}
       className="flex items-center justify-center hover:text-green-600 cursor-pointer mx-8 
-            ease-out duration-300 group"
+            ease-out duration-300 group text-sm"
       activeClassName="text-green-600"
       exact
     >
-      <FaAngleLeft
+      <FiChevronLeft
         className={
           "group-hover:opacity-100 group-hover:text-green-600 group-hover:-translate-x-2 duration-200 transform ease-out" +
           (childrenActive
@@ -35,7 +35,7 @@ function NavbarItem(props) {
         }
       />
       {props.children}
-      <FaAngleRight
+      <FiChevronRight
         className={
           "group-hover:opacity-100 group-hover:text-green-600 group-hover:translate-x-2 duration-300 transform ease-out" +
           (childrenActive

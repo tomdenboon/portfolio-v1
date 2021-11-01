@@ -17,7 +17,7 @@ function Navbar() {
       </NavLink>
       <div className="sm:flex hidden items-center">
         <div className="animate-fade-in-down-delay-400 opacity-0">
-          <NavbarItem routeName="/">Home</NavbarItem>
+          <NavbarItem routeName="/">About</NavbarItem>
         </div>
         <div className="animate-fade-in-down-delay-500 opacity-0">
           <NavbarItem routeName="/projects">Projects</NavbarItem>

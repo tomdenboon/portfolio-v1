@@ -1,23 +1,10 @@
-import React, { useRef } from "react";
+import React from "react";
 import PersonCard from "./personCard/PersonCard";
-import BottomArrow from "./BottomArrow";
 
 function Home() {
-  const myRef = useRef(null);
-
-  const executeScroll = () => {
-    console.log("clickclak");
-    myRef.current.scrollIntoView({ behavior: "smooth" });
-  };
   return (
-    <div className="flex flex-col bg-gray-900">
-      <div className="flex flex-col items-center justify-center mt-20 sm:mt-0 sm:h-screen">
-        <PersonCard />
-        <button className="hidden sm:flex" onClick={executeScroll}>
-          <BottomArrow />
-        </button>
-      </div>
-      <div className="flex h-screen" ref={myRef}></div>
+    <div className="flex flex-col items-center justify-center mt-16 sm:mt-0 sm:h-screen">
+      <PersonCard />
     </div>
   );
 }

@@ -25,11 +25,11 @@ function PersonCardLeft() {
       <div className="flex text-3xl text-center font-serif font-black mt-5">
         Tom den Boon
       </div>
-      <div className="flex text-lg text-green-700 font-mono font-black mt-5 text-center">
+      <div className="flex text-lg text-gray-500 font-mono font-black mt-5 text-center">
         Software Developer
       </div>
       <a href="https://github.com/tomdenboon" target="_blank" rel="noreferrer">
-        <div className="flex text-3xl mt-5 hover:text-green-700 cursor-pointer select-none">
+        <div className="flex text-2xl mt-5 hover:text-green-600 cursor-pointer select-none">
           <FiGithub />
         </div>
       </a>

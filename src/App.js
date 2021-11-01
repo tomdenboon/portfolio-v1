@@ -11,6 +11,7 @@ import Projects from './components/Projects';
 function App() {
   return (
     <Router>
+      <div className="bg-gray-900 text-gray-300">
         <Navbar />
         <Switch>
           <Route exact path="/">
@@ -23,6 +24,7 @@ function App() {
             <Projects />
           </Route>
         </Switch>
+      </div>
     </Router>
   );
 }

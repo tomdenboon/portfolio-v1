@@ -21,7 +21,7 @@ function NavbarItem(props) {
   return (
     <NavLink
       to={props.routeName}
-      className="flex items-center justify-center hover:text-green-600 cursor-pointer mx-5 
+      className="flex items-center justify-center hover:text-green-600 cursor-pointer mx-8 
             ease-out duration-300 group"
       activeClassName="text-green-600"
       exact

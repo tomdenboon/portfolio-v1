@@ -1,34 +1,50 @@
-import React, { useState, useEffect } from 'react';
-import { FaAngleLeft, FaAngleRight } from 'react-icons/fa';
-import { NavLink } from 'react-router-dom';
-import { withRouter } from 'react-router-dom'
+import React, { useState, useEffect } from "react";
+import { FaAngleLeft, FaAngleRight } from "react-icons/fa";
+import { NavLink } from "react-router-dom";
+import { withRouter } from "react-router-dom";
 
 function NavbarItem(props) {
-    const [childrenActive, setChildrenActive] = useState(false);
+  const [childrenActive, setChildrenActive] = useState(false);
 
-    useEffect(() => {
-        isActiveItem();
-    })
+  useEffect(() => {
+    isActiveItem();
+  });
 
-    const isActiveItem = (() => {
-        if ((props.location.pathname !== props.routeName) && childrenActive) {
-            setChildrenActive(false);
-        } else if((props.location.pathname === props.routeName) && !childrenActive){
-            setChildrenActive(true);
+  const isActiveItem = () => {
+    if (props.location.pathname !== props.routeName && childrenActive) {
+      setChildrenActive(false);
+    } else if (props.location.pathname === props.routeName && !childrenActive) {
+      setChildrenActive(true);
+    }
+  };
+
+  return (
+    <NavLink
+      to={props.routeName}
+      className="flex items-center justify-center hover:text-green-600 cursor-pointer mx-5 
+            ease-out duration-300 group"
+      activeClassName="text-green-600"
+      exact
+    >
+      <FaAngleLeft
+        className={
+          "group-hover:opacity-100 group-hover:text-green-600 group-hover:-translate-x-2 duration-200 transform ease-out" +
+          (childrenActive
+            ? "opacity-100 text-green-600 text-xl -translate-x-2"
+            : "text-gray-200 text-xl opacity-0 -translate-x-5")
         }
-    });
-
-    return (
-        <NavLink to={props.routeName} className="flex items-center justify-center hover:text-green-600 cursor-pointer mx-14 
-            ease-out duration-300 group" activeClassName="text-green-600" exact>
-            <FaAngleLeft className={'group-hover:opacity-100 group-hover:text-green-600 group-hover:-translate-x-2 duration-200 transform ease-out'
-                + (childrenActive ? "opacity-100 text-green-600 text-xl -translate-x-2" : "text-gray-200 text-xl opacity-0 -translate-x-5")} />
-            {props.children}
-            <FaAngleRight className={'group-hover:opacity-100 group-hover:text-green-600 group-hover:translate-x-2 duration-300 transform ease-out'
-                + (childrenActive ? "opacity-100 text-green-600 text-xl translate-x-2" : "text-gray-200 text-xl opacity-0 translate-x-5")} />
-
-        </NavLink>
-    );
+      />
+      {props.children}
+      <FaAngleRight
+        className={
+          "group-hover:opacity-100 group-hover:text-green-600 group-hover:translate-x-2 duration-300 transform ease-out" +
+          (childrenActive
+            ? "opacity-100 text-green-600 text-xl translate-x-2"
+            : "text-gray-200 text-xl opacity-0 translate-x-5")
+        }
+      />
+    </NavLink>
+  );
 }
- 
+
 export default withRouter(NavbarItem);

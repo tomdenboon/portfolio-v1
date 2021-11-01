@@ -11,7 +11,6 @@ import Projects from './components/Projects';
 function App() {
   return (
     <Router>
-      <div className="flex flex-col">
         <Navbar />
         <Switch>
           <Route exact path="/">
@@ -24,7 +23,6 @@ function App() {
             <Projects />
           </Route>
         </Switch>
-      </div>
     </Router>
   );
 }

@@ -1,25 +1,24 @@
-import React, { useRef } from 'react';
-import PersonCard from "./PersonCard";
+import React, { useRef } from "react";
+import PersonCard from "./personCard/PersonCard";
 import BottomArrow from "./BottomArrow";
 
 function Home() {
-    const myRef = useRef(null)
-    const executeScroll = () => {
-        console.log("clickclak")
-        myRef.current.scrollIntoView({ behavior: 'smooth'})
-    }
-    return ( 
-        <div className="flex flex-col">
-            <div className="w-full h-screen justify-center items-center flex flex-col bg-gray-900">
-                <PersonCard />
-                <button onClick={executeScroll}>
-                    <BottomArrow/>
-                </button>
-            </div>
-            <div className="w-full h-screen bg-gray-900" ref={myRef}>
-            </div>
-        </div>
-     );
+  const myRef = useRef(null);
+  const executeScroll = () => {
+    console.log("clickclak");
+    myRef.current.scrollIntoView({ behavior: "smooth" });
+  };
+  return (
+    <div className="flex flex-col bg-gray-900">
+      <div className="flex flex-col items-center justify-center pt-16 sm:pt-0 sm:h-screen">
+        <PersonCard />
+        <button className="invisible sm:visible" onClick={executeScroll}>
+          <BottomArrow />
+        </button>
+      </div>
+      <div className="flex h-screen" ref={myRef}></div>
+    </div>
+  );
 }
- 
+
 export default Home;

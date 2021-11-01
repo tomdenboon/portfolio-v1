@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import { FaGrin, FaGrinWink, FaGithub } from "react-icons/fa";
+import { FaGrin, FaGrinWink } from "react-icons/fa";
+import { FiGithub } from "react-icons/fi";
+
 
 function PersonCardLeft() {
   const [isHoveredSmiley, setIsHoveredSmiley] = useState(false);
@@ -9,7 +11,8 @@ function PersonCardLeft() {
   };
 
   return (
-    <div className="sm:w-1/3 items-center flex flex-col sm:my-16 my-10 mt-16">
+    <div className="relative bg-gray-800 sm:w-1/3 items-center flex flex-col rounded-l-md sm:rounded-r-none rounded-r-md
+    sm:py-16 py-10 duration-300 animate-fade-in-up-delay-100 sm:animate-fade-in-up-delay-600 opacity-0">
       <div
         className="sm:h-48 sm:w-48 h-36 w-36 flex items-center sm:text-8xl
         text-7xl justify-center rounded-full bg-gray-900 text-green-700"
@@ -25,8 +28,8 @@ function PersonCardLeft() {
         Software Developer
       </div>
       <a href="https://github.com/tomdenboon" target="_blank" rel="noreferrer">
-        <div className="flex text-4xl my-5 hover:text-gray-400 cursor-pointer select-none">
-          <FaGithub />
+        <div className="flex text-3xl mt-5 hover:text-green-700 cursor-pointer select-none">
+          <FiGithub />
         </div>
       </a>
     </div>

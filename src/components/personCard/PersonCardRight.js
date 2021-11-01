@@ -10,7 +10,7 @@ function PersonCardRight() {
   return (
     <div
       className="sm:w-2/3 sm:ml-px sm:mt-0 mt-2 rounded-l-md sm:rounded-l-none rounded-r-md bg-gray-800 
-    animate-fade-in-up-delay-200 sm:animate-fade-in-right-delay-700 opacity-0"
+      animate-fade-in-up-delay-200 sm:animate-fade-in-right-delay-200 opacity-0"
     >
       <div className="flex flex-col items-center justify-center sm:text-7xl text-6xl font-bold my-10">
         Hello,
@@ -35,11 +35,11 @@ function PersonCardRight() {
           loves learning new, and improving. Can work on all parts of the stack.
         </div>
         <div
-            className="transform translate-x-1/2 sm:translate-y-1/2  sm:rotate-90 sm:-right-4 sm:bottom-1/2 
+          className="transform translate-x-1/2 sm:translate-y-1/2  sm:rotate-90 sm:-right-4 sm:bottom-1/2 
             bottom-0 right-1/2 translate-y-full 
             absolute text-green-700 font-bold font-mono text-3xl select-none flex"
         >
-            {formatTime(timer.time)}
+          {formatTime(timer.time)}
         </div>
       </div>
     </div>

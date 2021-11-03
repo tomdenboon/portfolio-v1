@@ -5,8 +5,8 @@ import PersonCardRight from "./PersonCardRight";
 function PersonCard() {
   return (
     <div
-      className="relative flex font filter drop-shadow-xl
-      rounded-md m-2 sm:flex-row flex-col sm:mb-0 mb-12 sm:mx-8 min-w-min max-w-screen-lg items-stretch"
+      className="relative flex flex-col items-stretch max-w-screen-lg rounded-md filter drop-shadow-xl
+       sm:flex-row sm:mb-2 xl:mt-0 mt-16"
     >
       <PersonCardLeft />
       <PersonCardRight />

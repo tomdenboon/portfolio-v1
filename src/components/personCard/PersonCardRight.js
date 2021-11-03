@@ -1,48 +1,53 @@
 import React from "react";
-import { useSelector } from "react-redux";
+import useMediaQuery from "react-responsive";
 import { Link } from "react-router-dom";
+import CustomButton from "../CustomButton";
+import FadeInAnimationWrapper from "../wrappers/FadeInAnimationWrapper";
 import { formatTime } from "../../utils";
-import CustomButton1 from "./CustomButton1";
+import { useSelector } from "react-redux";
 
 function PersonCardRight() {
   const timer = useSelector((state) => state.timer);
+  const isMobile = useMediaQuery({ query: `(max-width: 640px)` });
 
   return (
-    <div
-      className="sm:w-2/3 sm:ml-px sm:mt-0 mt-2 rounded-l-md sm:rounded-l-none rounded-r-md bg-gray-800 
-      animate-fade-in-up-delay-200 sm:animate-fade-in-right-delay-200 opacity-0"
+    <FadeInAnimationWrapper
+      direction={isMobile ? "down" : "right"}
+      delay="100"
+      waitForNavbar={true}
     >
-      <div className="flex flex-col items-center justify-center sm:text-7xl text-6xl font-bold my-10">
-        Hello,
-        <div className="h-1 mt-2 w-16 bg-green-700"></div>
-      </div>
-      <div className="sm:flex">
-        <div className="sm:w-1/2 flex flex-col m-4 text-center">
-          loves learning new, and improving. Can work on all parts of the stack.
-          loves learning new, and improving. Can work on all parts of the stack.
-          loves learning new, and improving. Can work on all parts of the stack.
-          loves learning new, and improving. Can work on all parts of the stack.
-          <div className="flex justify-evenly mt-4">
-            <Link to="/project">
-              <CustomButton1 title="Projects" />
-            </Link>
+      <div className="h-full bg-gray-800 sm:ml-px rounded-l-md sm:rounded-l-none rounded-r-md sm:mt-2 mx-2 sm:mx-0 sm:mr-2">
+        <div className="flex flex-col items-center justify-center pt-10 text-6xl font-bold sm:text-7xl">
+          Hello,
+          <div className="w-16 h-1 mt-2 bg-green-700"></div>
+        </div>
+        <div className="sm:flex">
+          <div className="flex flex-col items-center justify-center p-2 text-center sm:w-1/2">
+            loves learning new, and nee. Can work on all parts of the stack.
+            loves learning new, and nee. Can work on all parts of the stack.
+            loves learning new, and nee. Can work on all parts of the stack.
+            loves learning new, and nee. Can work on all parts of the stack.
+            <div className="flex items-center mt-2">
+              <Link to="/projects">
+                <CustomButton title="Projects" />
+              </Link>
+            </div>
+          </div>
+          <div className="flex p-2 text-center sm:w-1/2">
+            loves learning new, and nee. Can work on all parts of the stack.
+            loves learning new, and nee. Can work on all parts of the stack.
+            loves learning new, and nee. Can work on all parts of the stack.
+            loves learning new, and nee. Can work on all parts of the stack.
           </div>
         </div>
-        <div className="sm:w-1/2 flex m-4 text-center">
-          loves learning new, and improving. Can work on all parts of the stack.
-          loves learning new, and improving. Can work on all parts of the stack.
-          loves learning new, and improving. Can work on all parts of the stack.
-          loves learning new, and improving. Can work on all parts of the stack.
-        </div>
         <div
-          className="transform translate-x-1/2 sm:translate-y-1/2  sm:rotate-90 sm:-right-4 sm:bottom-1/2 
-            bottom-0 right-1/2 translate-y-full 
-            absolute text-green-700 font-bold font-mono text-3xl select-none flex"
+          className="absolute flex font-mono text-3xl font-bold select-none text-green-700
+           transform translate-x-1/2 translate-y-1/2 xl:rotate-90 xl:-right-2 xl:bottom-1/2 -bottom-4 sm:-bottom-6 right-1/2"
         >
           {formatTime(timer.time)}
         </div>
       </div>
-    </div>
+    </FadeInAnimationWrapper>
   );
 }
 

@@ -1,36 +1,32 @@
-import React from 'react';
-import ReactDOM from 'react-dom';
-import './index.css';
-import App from './App';
-import { createStore } from 'redux';
-import { Provider } from 'react-redux';
-import reducers from './redux/reducers';
-import { setTimer, update } from './redux/actions'
-import { loadState, saveState } from './utils'
+import React from "react";
+import ReactDOM from "react-dom";
+import "./index.css";
+import App from "./App";
+import { createStore } from "redux";
+import { Provider } from "react-redux";
+import { update } from "./actions";
+import persistStore from "redux-persist/lib/persistStore";
+import { PersistGate } from "redux-persist/integration/react";
+import persistedReducer from "./configureStore";
 
-const persistedState = loadState()
-const store = createStore(reducers, persistedState)
-if(persistedState === undefined){
-  store.dispatch(setTimer("The Timer", 0))
-}
+let store = createStore(persistedReducer);
+let persistor = persistStore(store);
 
-store.subscribe(() => {
-  saveState(store.getState())
-})
-
-let lastUpdateTime = Date.now()
+let lastUpdateTime = Date.now();
 setInterval(() => {
-  const now = Date.now()
-  const deltaTime = now - lastUpdateTime
-  lastUpdateTime = now
-  store.dispatch(update(deltaTime))
-}, 50)
+  const now = Date.now();
+  const deltaTime = now - lastUpdateTime;
+  lastUpdateTime = now;
+  store.dispatch(update(deltaTime));
+}, 50);
 
 ReactDOM.render(
   <React.StrictMode>
     <Provider store={store}>
-      <App />
+      <PersistGate loading={null} persistor={persistor}>
+        <App />
+      </PersistGate>
     </Provider>
   </React.StrictMode>,
-  document.getElementById('root')
+  document.getElementById("root")
 );

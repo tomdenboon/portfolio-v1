@@ -1,17 +1,13 @@
-import React from 'react';  
-import Navbar from './components/Navbar';
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-} from "react-router-dom";
-import Home from './components/Home';
-import Projects from './components/Projects';
+import React from "react";
+import Navbar from "./components/Navbar";
+import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
+import Home from "./components/Home";
+import Projects from "./components/Projects";
 
 function App() {
   return (
     <Router>
-      <div className="bg-gray-900 text-gray-300">
+      <div className="text-gray-300 bg-gray-900">
         <Navbar />
         <Switch>
           <Route exact path="/">

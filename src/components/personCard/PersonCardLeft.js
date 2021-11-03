@@ -1,6 +1,7 @@
 import React, { useState } from "react";
 import { FaGrin, FaGrinWink } from "react-icons/fa";
-import { FiGithub } from "react-icons/fi";
+import IconRow from "./IconRow";
+import FadeInAnimationWrapper from "../wrappers/FadeInAnimationWrapper";
 
 function PersonCardLeft() {
   const [isHoveredSmiley, setIsHoveredSmiley] = useState(false);
@@ -10,30 +11,24 @@ function PersonCardLeft() {
   };
 
   return (
-    <div
-      className="relative bg-gray-800 sm:w-1/3 items-center flex flex-col rounded-l-md sm:rounded-r-none rounded-r-md
-    sm:py-16 py-10 duration-300 animate-fade-in-up-delay-100 sm:animate-fade-in-up-delay-100 opacity-0"
-    >
-      <div
-        className="sm:h-48 sm:w-48 h-36 w-36 flex items-center sm:text-8xl
-        text-7xl justify-center rounded-full bg-gray-900 text-green-700"
-        onMouseEnter={toggleHover}
-        onMouseLeave={toggleHover}
-      >
-        {isHoveredSmiley ? <FaGrinWink /> : <FaGrin />}
-      </div>
-      <div className="flex text-3xl text-center font-serif font-black mt-5">
-        Tom den Boon
-      </div>
-      <div className="flex text-lg text-gray-500 font-mono font-black mt-5 text-center">
-        Software Developer
-      </div>
-      <a href="https://github.com/tomdenboon" target="_blank" rel="noreferrer">
-        <div className="flex text-2xl mt-5 hover:text-green-700 cursor-pointer select-none">
-          <FiGithub />
+    <FadeInAnimationWrapper direction="up" delay="100" waitForNavbar={true}>
+      <div className="flex flex-col h-full items-center p-10 duration-300 bg-gray-800 rounded-l-md sm:rounded-r-none rounded-r-md m-2 sm:mr-0">
+        <div
+          className="flex items-center justify-center text-green-700 bg-gray-900 rounded-full sm:h-48 sm:w-48 h-36 w-36 sm:text-8xl text-7xl"
+          onMouseEnter={toggleHover}
+          onMouseLeave={toggleHover}
+        >
+          {isHoveredSmiley ? <FaGrinWink /> : <FaGrin />}
         </div>
-      </a>
-    </div>
+        <div className="flex mt-5 font-serif text-3xl font-black text-center">
+          Tom den Boon
+        </div>
+        <div className="flex mt-5 font-mono text-lg font-black text-center text-gray-500">
+          Software Developer
+        </div>
+        <IconRow />
+      </div>
+    </FadeInAnimationWrapper>
   );
 }
 

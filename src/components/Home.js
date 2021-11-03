@@ -3,7 +3,7 @@ import PersonCard from "./personCard/PersonCard";
 
 function Home() {
   return (
-    <div className="flex flex-col items-center justify-center mt-16 sm:mt-0 sm:h-screen">
+    <div className="flex flex-col items-center justify-center xl:h-screen min-h-screen pb-9">
       <PersonCard />
     </div>
   );

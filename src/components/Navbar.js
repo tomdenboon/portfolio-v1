@@ -8,7 +8,9 @@ import { isNavbarLoaded } from "../actions";
 function Navbar() {
   const dispatch = useDispatch();
   useEffect(() => {
+    console.log("did load");
     dispatch(isNavbarLoaded(false));
+    console.log("did did try to dispatch");
     setTimeout(() => {
       dispatch(isNavbarLoaded(true));
     }, 600);

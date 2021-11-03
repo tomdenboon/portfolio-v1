@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useEffect } from "react";
 import { useSelector } from "react-redux";
 function FadeInAnimationWrapper(props) {
   const isNavbarLoaded = useSelector((state) => state.isNavbarLoaded);
@@ -8,7 +8,10 @@ function FadeInAnimationWrapper(props) {
       className={
         "opacity-0 transform " +
         (!props.waitForNavbar || isNavbarLoaded
-          ? "animate-fade-in-" + props.direction + "-delay-" + props.delay
+          ? "opacity-1 animate-fade-in-" +
+            props.direction +
+            "-delay-" +
+            props.delay
           : "")
       }
     >

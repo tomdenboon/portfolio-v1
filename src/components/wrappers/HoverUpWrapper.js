@@ -8,10 +8,12 @@ function HoverUpWrapper(props) {
   };
 
   return (
-    <div className={" mt-" + props.hoverHeight}>
+    <div
+      className={" mt-" + props.hoverHeight}
+      onMouseEnter={toggleHover}
+      onMouseLeave={toggleHover}
+    >
       <div
-        onMouseEnter={toggleHover}
-        onMouseLeave={toggleHover}
         className={
           "transform duration-200 ease-in " +
           (isWrapperHovered

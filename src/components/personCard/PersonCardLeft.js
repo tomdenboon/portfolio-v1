@@ -20,10 +20,10 @@ function PersonCardLeft() {
         >
           {isHoveredSmiley ? <FaGrinWink /> : <FaGrin />}
         </div>
-        <div className="flex mt-5 font-serif text-3xl font-black text-center">
+        <div className="flex flex-col mt-5 font-serif text-2xl font-black text-center">
           Tom den Boon
         </div>
-        <div className="flex mt-5 font-mono text-lg font-black text-center text-gray-400">
+        <div className="flex mt-5 font-mono text-lg font-black text-center text-gray-300">
           Software Developer
         </div>
         <IconRow />

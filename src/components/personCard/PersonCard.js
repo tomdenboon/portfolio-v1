@@ -10,7 +10,6 @@ function PersonCard() {
     >
       <PersonCardLeft />
       <PersonCardRight />
-      <div className="pb-16"></div>
     </div>
   );
 }

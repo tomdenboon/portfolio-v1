@@ -17,7 +17,7 @@ function Navbar() {
   }, [dispatch]);
 
   return (
-    <div className="absolute top-0 left-0 flex items-center justify-between w-full h-16 px-12 font-mono bg-gray-800 filter drop-shadow-lg">
+    <div className="top-0 left-0 flex items-center justify-between w-full h-16 px-12 font-mono bg-gray-800 filter drop-shadow-lg">
       <NavLink
         to="/"
         className="font-serif text-4xl font-bold opacity-0 cursor-pointer animate-fade-in"

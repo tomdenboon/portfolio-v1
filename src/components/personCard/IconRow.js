@@ -5,7 +5,7 @@ import HoverUpWrapper from "../wrappers/HoverUpWrapper";
 function IconRow() {
   return (
     <div className="flex mt-5 text-xl">
-      <div className="hover:text-green-700 m-2 transform ease-out duration-200">
+      <div className="hover:text-green-700 m-2 transform duration-100">
         <a
           href="https://github.com/tomdenboon"
           target="_blank"
@@ -16,7 +16,7 @@ function IconRow() {
           </HoverUpWrapper>
         </a>
       </div>
-      <div className="hover:text-green-700 m-2 transform ease-out duration-200">
+      <div className="hover:text-green-700 m-2">
         <a
           href="mailto:tomdenboon@hotmail.com?subject=Your inquiry"
           target="_blank"

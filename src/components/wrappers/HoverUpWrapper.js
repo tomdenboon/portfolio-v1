@@ -9,13 +9,13 @@ function HoverUpWrapper(props) {
 
   return (
     <div
-      className={" mt-" + props.hoverHeight}
+      className={"flex mt-" + props.hoverHeight}
       onMouseEnter={toggleHover}
       onMouseLeave={toggleHover}
     >
       <div
         className={
-          "transform duration-200 ease-in " +
+          "flex transform duration-300 ease-in-out " +
           (isWrapperHovered
             ? "-translate-y-" + props.hoverHeight
             : "-translate-y-0")

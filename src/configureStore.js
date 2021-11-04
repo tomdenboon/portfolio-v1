@@ -7,7 +7,6 @@ import timerReducer from "./reducers/timerReducer";
 const rootPersistConfig = {
   key: "root",
   storage: storage,
-  blacklist: ["isNavbarLoaded"],
 };
 
 const rootReducer = combineReducers({

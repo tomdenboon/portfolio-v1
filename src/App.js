@@ -7,7 +7,7 @@ import Projects from "./components/Projects";
 function App() {
   return (
     <Router>
-      <div className="text-gray-300 bg-gray-900">
+      <div className="flex flex-col h-screen text-white bg-gray-900">
         <Navbar />
         <Switch>
           <Route exact path="/">

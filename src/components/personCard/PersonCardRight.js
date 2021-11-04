@@ -16,7 +16,7 @@ function PersonCardRight() {
       delay="100"
       waitForNavbar={true}
     >
-      <div className="h-full bg-gray-800 sm:ml-px rounded-l-md sm:rounded-l-none rounded-r-md sm:mt-2 mx-2 sm:mx-0 sm:mr-2">
+      <div className="h-full bg-gray-800 rounded-l-sm sm:rounded-l-none rounded-r-sm">
         <div className="flex flex-col items-center justify-center pt-10 text-6xl font-bold sm:text-7xl">
           Hello,
           <div className="w-16 h-1 mt-2 bg-green-700"></div>
@@ -42,7 +42,7 @@ function PersonCardRight() {
         </div>
         <div
           className="absolute flex font-mono text-3xl font-bold select-none text-green-700
-           transform translate-x-1/2 translate-y-1/2 xl:rotate-90 xl:-right-2 xl:bottom-1/2 -bottom-4 sm:-bottom-6 right-1/2"
+           transform translate-x-1/2 translate-y-1/2 xl:rotate-90 xl:-right-4 xl:bottom-1/2 -bottom-4 sm:-bottom-4 right-1/2"
         >
           {formatTime(timer.time)}
         </div>

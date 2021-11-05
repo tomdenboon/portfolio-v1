@@ -1,7 +1,7 @@
 import React from "react";
 import HoverUpWrapper from "./wrappers/HoverUpWrapper";
 import FadeInAnimationWrapper from "./wrappers/FadeInAnimationWrapper";
-import { FiGithub, FiFolder } from "react-icons/fi";
+import { FiGithub, FiFolder, FiYoutube } from "react-icons/fi";
 
 function ProjectCard(props) {
   function ProjectCardOuter(props) {
@@ -10,7 +10,7 @@ function ProjectCard(props) {
 
   function ProjectCardInner(props) {
     return (
-      <div className="relative flex flex-col px-8 py-8 bg-gray-800 select-none group rounded-sm">
+      <div className="relative w-full flex flex-col px-8 py-8 bg-gray-800 select-none group rounded-sm">
         {props.children}
       </div>
     );
@@ -18,18 +18,30 @@ function ProjectCard(props) {
 
   function ProjectCardHeader() {
     return (
-      <div className="w-full flex justify-between items-center transition ease-in-out duration-200">
+      <div className="flex justify-between items-center transition ease-in-out duration-200">
         <div className="text-4xl text-green-700">
           <FiFolder className="stroke-current stroke-1" />
         </div>
-        <a
-          href={props.githubLink}
-          target="_blank"
-          rel="noreferrer"
-          className=" text-2xl text-gray-500 hover:text-green-700 transition ease-in-out duration-200"
-        >
-          <FiGithub />
-        </a>
+        <div className="flex gap-8">
+          {props.youtubeLink !== "" && (
+            <a
+              href={props.youtubeLink}
+              target="_blank"
+              rel="noreferrer"
+              className=" text-2xl text-gray-500 hover:text-green-700 transition ease-in-out duration-200"
+            >
+              <FiYoutube />
+            </a>
+          )}
+          <a
+            href={props.githubLink}
+            target="_blank"
+            rel="noreferrer"
+            className=" text-2xl text-gray-500 hover:text-green-700 transition ease-in-out duration-200"
+          >
+            <FiGithub />
+          </a>
+        </div>
       </div>
     );
   }

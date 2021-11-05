@@ -4,7 +4,7 @@ import CustomButton1 from "./CustomButton";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { isNavbarLoaded } from "../actions";
-
+import Cv from "../content/cv.pdf";
 function Navbar() {
   const dispatch = useDispatch();
   useEffect(() => {
@@ -17,14 +17,11 @@ function Navbar() {
   }, [dispatch]);
 
   return (
-    <div className="top-0 left-0 flex items-center justify-between w-full h-16 px-12 font-mono bg-gray-800 filter drop-shadow-lg">
-      <NavLink
-        to="/"
-        className="font-serif text-4xl font-bold opacity-0 cursor-pointer animate-fade-in"
-      >
+    <div className="top-0 left-0 flex items-center justify-between w-full h-16 px-12 font-mono bg-gray-800 filter drop-shadow-lg z-10">
+      <NavLink to="/" className="font-serif text-4xl font-bold animate-fade-in">
         Tom
       </NavLink>
-      <div className="items-center hidden sm:flex">
+      <div className="hidden md:flex">
         <NavbarItem routeName="/" fadeInDelay="100">
           About
         </NavbarItem>
@@ -32,9 +29,9 @@ function Navbar() {
           Projects
         </NavbarItem>
         <div className="ml-8 opacity-0 animate-fade-in-down-delay-300">
-          <NavLink to="/resume">
-            <CustomButton1 title="Resume" />
-          </NavLink>
+          <a href={Cv} target="_blank" rel="noreferrer">
+            <CustomButton1 title="Resumé" />
+          </a>
         </div>
       </div>
     </div>

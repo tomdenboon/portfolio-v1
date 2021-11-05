@@ -15,7 +15,7 @@ function HoverUpWrapper(props) {
     >
       <div
         className={
-          "flex transform duration-300 ease-in-out " +
+          "w-full flex transform duration-300 ease-in-out " +
           (isWrapperHovered
             ? "-translate-y-" + props.hoverHeight
             : "-translate-y-0")

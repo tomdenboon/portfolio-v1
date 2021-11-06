@@ -3,6 +3,14 @@ const colors = require("tailwindcss/colors");
 module.exports = {
   darkMode: false, // or 'media' or 'class'
   theme: {
+    colors: {
+      primary: "var(--theme-primary)",
+      "primary-dark": "var(--theme-primary-dark)",
+      secondary: "var(--theme-secondary)",
+      "text-base": "var(--theme-text-base)",
+      "text-dark": "var(--theme-text-dark)",
+      "text-darkest": "var(--theme-text-darkest)",
+    },
     extend: {
       colors: {
         gray: colors.gray,

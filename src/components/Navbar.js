@@ -35,7 +35,7 @@ function Navbar() {
           (isClickedHamburger
             ? "translate-y-0 ease-out"
             : "-translate-y-full ease-in") +
-          " transform transition  duration-200 absolute flex md:hidden flex-col w-full items-center bg-gray-800 mt-16 z-40 gap-6 p-6"
+          " transform transition  duration-200 absolute flex md:hidden flex-col w-full items-center bg-primary mt-16 z-40 gap-8 p-8 filter shadow-md"
         }
       >
         <div onClick={linkIsClicked}>
@@ -54,7 +54,7 @@ function Navbar() {
           </a>
         </div>
       </div>
-      <div className="top-0 left-0 absolute flex items-center justify-between w-full h-16 px-12 font-mono bg-gray-800 filter z-40">
+      <div className="top-0 left-0 absolute flex items-center justify-between w-full h-16 px-12 font-mono bg-primary filter z-40 md:shadow-md">
         <NavLink
           to="/"
           className="font-serif text-4xl font-bold animate-fade-in"

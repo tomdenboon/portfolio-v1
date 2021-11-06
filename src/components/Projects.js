@@ -4,11 +4,11 @@ import FadeInAnimationWrapper from "./wrappers/FadeInAnimationWrapper";
 
 function Projects(props) {
   return (
-    <div className="h-screen overflow-y-auto flex flex-col items-center pb-2 mt-16">
+    <div className="h-screen overflow-y-auto flex flex-col items-center pb-16 mt-16">
       <FadeInAnimationWrapper delay={100} direction="down" waitForNavbar={true}>
         <div className="flex flex-col items-center text-5xl font-semibold py-16 ">
           Projects
-          <div className="w-1/2 h-1 mt-4 bg-green-700"></div>
+          <div className="w-1/2 h-1 mt-4 bg-secondary"></div>
         </div>
       </FadeInAnimationWrapper>
       <div className="max-w-screen-xl grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-flow-row auto-rows-max">
@@ -22,7 +22,7 @@ function Projects(props) {
           Created an api for the{" "}
           <a
             href="https://fse.studenttheses.ub.rug.nl/25813/"
-            className="text-green-700 hover:underline"
+            className="text-secondary hover:underline"
           >
             bachelor thesis
           </a>
@@ -45,7 +45,7 @@ function Projects(props) {
           Made a web interface for the api of the{" "}
           <a
             href="https://fse.studenttheses.ub.rug.nl/25813/"
-            className="text-green-700 hover:underline"
+            className="text-secondary hover:underline"
           >
             bachelor thesis
           </a>

@@ -3,12 +3,12 @@ import React from "react";
 function CustomButton1(props) {
   return (
     <button
-      className="px-3 py-2 text-green-700 transition-all 
-      duration-300 border rounded select-none
-      border-green-700 hover:bg-green-700 hover:bg-opacity-10 
-      hover:border-opacity-100 ease--out"
+      className="relative text-secondary transition-all 
+      border rounded select-none bg-opacity-0
+      border-secondary"
     >
-      {props.title}
+      <div className="absolute bg-secondary w-full h-full rounded transform opacity-0 hover:opacity-20 ease-out duration-300"></div>
+      <div className="my-1 mx-2">{props.title}</div>
     </button>
   );
 }

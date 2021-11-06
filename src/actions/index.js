@@ -13,3 +13,11 @@ export const isNavbarLoaded = (isLoaded) => {
     payload: { isLoaded },
   };
 };
+
+export const INCREMENT_THEME = "INCREMENT_THEME";
+export const nextTheme = () => {
+  return {
+    type: INCREMENT_THEME,
+    payload: {},
+  };
+};

@@ -1,17 +1,17 @@
 import React, { useEffect } from "react";
+import { useSelector } from "react-redux";
 import Navbar from "./components/Navbar";
 import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
 import Home from "./components/Home";
 import Projects from "./components/Projects";
 import { applyTheme } from "./themes/utils";
-import defaultTheme from "./themes/defaultTheme";
-import testTheme from "./themes/testTheme";
-import stealthTheme from "./themes/stealthTheme";
 
 function App() {
+  const theme = useSelector((state) => state.theme.theme);
   useEffect(() => {
-    applyTheme(defaultTheme);
-  }, []);
+    applyTheme(theme);
+  });
+
   return (
     <Router>
       <div className="flex flex-col h-screen text-text-base bg-primary-dark">

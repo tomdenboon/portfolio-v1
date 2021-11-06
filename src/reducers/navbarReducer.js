@@ -1,7 +1,7 @@
 // Import all of our actions
 import { NAVBAR_LOADED } from "../actions";
 
-const timerReducer = (state = false, action) => {
+const navbarReducer = (state = false, action) => {
   switch (action.type) {
     case NAVBAR_LOADED:
       // Add a new timer, return a copy of state
@@ -11,4 +11,4 @@ const timerReducer = (state = false, action) => {
   }
 };
 
-export default timerReducer;
+export default navbarReducer;

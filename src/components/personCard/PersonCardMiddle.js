@@ -1,22 +1,30 @@
 import React, { useState } from "react";
 import { FaGrin, FaGrinWink } from "react-icons/fa";
+import { useDispatch } from "react-redux";
+import { nextTheme } from "../../actions";
 import IconRow from "./IconRow";
 import FadeInAnimationWrapper from "../wrappers/FadeInAnimationWrapper";
 
 function PersonCardMiddle() {
+  const dispatch = useDispatch();
   const [isHoveredSmiley, setIsHoveredSmiley] = useState(false);
 
   const toggleHover = () => {
     setIsHoveredSmiley(!isHoveredSmiley);
   };
 
+  const switchTheme = () => {
+    dispatch(nextTheme());
+  };
+
   return (
     <FadeInAnimationWrapper direction="up" delay="400" waitForNavbar={true}>
       <div className="flex flex-col h-full w-full lg:w-min justify-center items-center p-8 bg-primary rounded-l-sm sm:rounded-r-none rounded-r-sm">
         <div
-          className="flex items-center justify-center text-secondary bg-primary-dark rounded-full sm:h-48 sm:w-48 h-36 w-36 sm:text-8xl text-7xl"
+          className="flex items-center justify-center text-secondary bg-primary-dark rounded-full sm:h-48 sm:w-48 h-36 w-36 sm:text-8xl text-7xl cursor-pointer"
           onMouseEnter={toggleHover}
           onMouseLeave={toggleHover}
+          onClick={switchTheme}
         >
           {isHoveredSmiley ? <FaGrinWink /> : <FaGrin />}
         </div>

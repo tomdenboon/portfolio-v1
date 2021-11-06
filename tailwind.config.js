@@ -69,6 +69,22 @@ module.exports = {
             transform: "translateX(0)",
           },
         },
+        "drop-in": {
+          "0%": {
+            transform: "translateY(-100%)",
+          },
+          "100%": {
+            transform: "translateY(0)",
+          },
+        },
+        "drop-out": {
+          "0%": {
+            transform: "translateY(0)",
+          },
+          "100%": {
+            transform: "translateY(-100%)",
+          },
+        },
       },
       animation: {
         "fade-in": "fade-in 0.3s ease-in both",
@@ -105,6 +121,8 @@ module.exports = {
         "fade-in-right-delay-700": "fade-in-right 0.3s ease-in 0.7s both",
         "fade-in-right-delay-800": "fade-in-right 0.3s ease-in 0.8s both",
         "fade-in-right-delay-900": "fade-in-right 0.3s ease-in 0.9s both",
+        "drop-in-borgir": "drop-in 0.3s ease-out forwards",
+        "drop-out-borgir": "drop-out 0.3s ease-in both",
       },
     },
   },

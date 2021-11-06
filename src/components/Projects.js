@@ -4,7 +4,7 @@ import FadeInAnimationWrapper from "./wrappers/FadeInAnimationWrapper";
 
 function Projects(props) {
   return (
-    <div className="h-screen overflow-y-auto flex flex-col items-center pb-2">
+    <div className="h-screen overflow-y-auto flex flex-col items-center pb-2 mt-16">
       <FadeInAnimationWrapper delay={100} direction="down" waitForNavbar={true}>
         <div className="flex flex-col items-center text-5xl font-semibold py-16 ">
           Projects

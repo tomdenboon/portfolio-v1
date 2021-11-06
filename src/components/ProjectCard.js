@@ -50,7 +50,7 @@ function ProjectCard(props) {
     return (
       <div className="absolute bottom-8 flex flex-wrap text-gray-500 font-mono font-thin text-sm gap-x-4 gap-y-1">
         {props.tags.map((tag, i) => {
-          return <div> {tag} </div>;
+          return <div key={i}> {tag} </div>;
         })}
       </div>
     );

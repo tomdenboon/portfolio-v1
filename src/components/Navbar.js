@@ -1,11 +1,15 @@
-import React, { useEffect } from "react";
+import React, { useEffect, useState } from "react";
 import NavbarItem from "./NavbarItem";
 import CustomButton1 from "./CustomButton";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { isNavbarLoaded } from "../actions";
 import Cv from "../content/cv.pdf";
+import { FiMenu } from "react-icons/fi";
+
 function Navbar() {
+  const [isClickedHamburger, setIsClickedHamburger] = useState(false);
+
   const dispatch = useDispatch();
   useEffect(() => {
     console.log("did load");
@@ -16,22 +20,63 @@ function Navbar() {
     }, 600);
   }, [dispatch]);
 
+  const toggleHamburger = () => {
+    setIsClickedHamburger(!isClickedHamburger);
+  };
+
+  const linkIsClicked = () => {
+    setIsClickedHamburger(false);
+  };
+
   return (
-    <div className="top-0 left-0 flex items-center justify-between w-full h-16 px-12 font-mono bg-gray-800 filter drop-shadow-lg z-10">
-      <NavLink to="/" className="font-serif text-4xl font-bold animate-fade-in">
-        Tom
-      </NavLink>
-      <div className="hidden md:flex">
-        <NavbarItem routeName="/" fadeInDelay="100">
-          About
-        </NavbarItem>
-        <NavbarItem routeName="/projects" fadeInDelay="200">
-          Projects
-        </NavbarItem>
-        <div className="ml-8 opacity-0 animate-fade-in-down-delay-300">
+    <div>
+      <div
+        className={
+          (isClickedHamburger
+            ? "translate-y-0 ease-out"
+            : "-translate-y-full ease-in") +
+          " transform transition  duration-200 absolute flex md:hidden flex-col w-full items-center bg-gray-800 mt-16 z-40 gap-6 p-6"
+        }
+      >
+        <div onClick={linkIsClicked}>
+          <NavbarItem routeName="/" fadeInDelay="100">
+            About
+          </NavbarItem>
+        </div>
+        <div onClick={linkIsClicked}>
+          <NavbarItem routeName="/projects" fadeInDelay="200">
+            Projects
+          </NavbarItem>
+        </div>
+        <div onClick={linkIsClicked}>
           <a href={Cv} target="_blank" rel="noreferrer">
             <CustomButton1 title="Resumé" />
           </a>
+        </div>
+      </div>
+      <div className="top-0 left-0 absolute flex items-center justify-between w-full h-16 px-12 font-mono bg-gray-800 filter z-40">
+        <NavLink
+          to="/"
+          className="font-serif text-4xl font-bold animate-fade-in"
+        >
+          Tom
+        </NavLink>
+        <FiMenu
+          className="flex md:hidden text-3xl cursor-pointer"
+          onClick={toggleHamburger}
+        />
+        <div className="hidden items-center md:flex">
+          <div className="opacity-0 animate-fade-in-down-delay-100">
+            <NavbarItem routeName="/">About</NavbarItem>
+          </div>
+          <div className="opacity-0 animate-fade-in-down-delay-200">
+            <NavbarItem routeName="/projects">Projects</NavbarItem>
+          </div>
+          <div className="ml-8 opacity-0 animate-fade-in-down-delay-300">
+            <a href={Cv} target="_blank" rel="noreferrer">
+              <CustomButton1 title="Resumé" />
+            </a>
+          </div>
         </div>
       </div>
     </div>

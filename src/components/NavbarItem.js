@@ -27,7 +27,7 @@ function NavbarItem(props) {
     >
       <FiChevronLeft
         className={
-          "group-hover:opacity-100 group-hover:text-secondary group-hover:-translate-x-2 duration-200 transform ease-in " +
+          "group-hover:opacity-100 group-hover:text-secondary group-hover:-translate-x-2 duration-200 transform " +
           (childrenActive
             ? "opacity-100 text-secondary text-xl -translate-x-2"
             : "text-xl opacity-0 -translate-x-5")
@@ -36,9 +36,9 @@ function NavbarItem(props) {
       {props.children}
       <FiChevronRight
         className={
-          "group-hover:opacity-100 group-hover:text-secondary group-hover:translate-x-2 duration-200 transform ease-in " +
+          "group-hover:opacity-100 group-hover:text-secondary group-hover:translate-x-2 duration-200 transform " +
           (childrenActive
-            ? "text-secondary text-xl opacity-100  translate-x-2"
+            ? "text-secondary text-xl opacity-100 translate-x-2"
             : "text-xl opacity-0 translate-x-5")
         }
       />

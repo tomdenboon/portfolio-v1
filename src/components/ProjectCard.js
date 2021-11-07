@@ -70,7 +70,7 @@ function ProjectCard(props) {
           <ProjectCardInner>
             <ProjectCardHeader />
             <div className="mb-4 mt-8 text-lg font-bold">{props.title}</div>
-            <div className="text-dark font-sans font-medium mb-12">
+            <div className="text-text-dark font-sans font-medium mb-12">
               {props.children}
             </div>
             <ProjectCardFooter />

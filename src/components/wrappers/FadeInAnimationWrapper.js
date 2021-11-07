@@ -6,7 +6,7 @@ function FadeInAnimationWrapper(props) {
   return (
     <div
       className={
-        "flex opacity-0 transform " +
+        "flex w-full opacity-0 transform " +
         (!props.waitForNavbar || isNavbarLoaded
           ? "opacity-1 animate-fade-in-" +
             props.direction +

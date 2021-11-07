@@ -6,8 +6,8 @@ const defaultTheme = createTheme({
   primaryDark: "#18181B",
   secondary: "#15803D",
   textBase: "#FFFFFF",
-  textDark: "#CCCCD0",
-  textDarkest: "#71717A",
+  textDark: "#D3D3D4",
+  textDarkest: "#939395",
 });
 
 export default defaultTheme;

@@ -2,12 +2,12 @@
 import { createTheme } from "./utils";
 
 const stealthTheme = createTheme({
-  primary: "#010203",
-  primaryDark: "#000000",
+  primary: "#0e1c29",
+  primaryDark: "#070f16",
   secondary: "#E25303",
-  textBase: "#c6c6c9",
-  textDark: "#9b9ba1",
-  textDarkest: "#71717A",
+  textBase: "#D1D4D7",
+  textDark: "#A6ABB0",
+  textDarkest: "#7B828A",
 });
 
 export default stealthTheme;

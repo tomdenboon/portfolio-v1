@@ -2,7 +2,6 @@
 import { INCREMENT_THEME } from "../actions";
 import defaultTheme from "../themes/defaultTheme";
 import stealthTheme from "../themes/stealthTheme";
-import monokaiTheme from "../themes/monokaiTheme";
 
 const initialState = {
   theme: defaultTheme,
@@ -12,12 +11,10 @@ const initialState = {
 const themeReducer = (state = initialState, action) => {
   switch (action.type) {
     case INCREMENT_THEME:
-      switch (state.count % 3) {
+      switch (state.count % 2) {
         case 0:
-          return { ...state, count: (state.count += 1), theme: monokaiTheme };
-        case 1:
           return { ...state, count: (state.count += 1), theme: defaultTheme };
-        case 2:
+        case 1:
           return { ...state, count: (state.count += 1), theme: stealthTheme };
         default:
           return state;

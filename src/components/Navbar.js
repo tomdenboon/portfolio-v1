@@ -29,7 +29,7 @@ function Navbar() {
   };
 
   return (
-    <div>
+    <nav>
       <div
         className={
           (isClickedHamburger
@@ -79,7 +79,7 @@ function Navbar() {
           </div>
         </div>
       </div>
-    </div>
+    </nav>
   );
 }
 

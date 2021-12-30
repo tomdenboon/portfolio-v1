@@ -20,9 +20,36 @@ function Projects(props) {
       <div className="max-w-screen-xl grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-flow-row auto-rows-max">
         <ProjectCard
           fadeInDelay={400}
+          githubLink="https://github.com/tomdenboon/monkey-log-api"
+          youtubeLink=""
+          title="MonkeyLog API"
+          tags={["PHP", "Laravel"]}
+        >
+          Created an API for a fully functional workout logger. With MonkeyLog
+          API users have all their workout data in the cloud, accessible from
+          anywhere on any device. With the API you can: Create exercises, Create
+          template workouts with the exercises. Start a workout and track your
+          sets. See your previous workouts. Future features include: Widget
+          statistics which lets the user select what data/graphs they want to
+          see on their statistics page, customizable settings, and much more.
+        </ProjectCard>
+        <ProjectCard
+          fadeInDelay={500}
+          githubLink="https://github.com/tomdenboon/monkey-log"
+          youtubeLink=""
+          title="MonkeyLog WebUI"
+          tags={["React", "Tailwind"]}
+        >
+          MonkeyLog is a workout logger which helps users track their workouts.
+          The UI was primarily designed for mobile first, whilst still looking
+          good on other devices. This project is still regularly being updated
+          since there are always improvements or new features to be added.
+        </ProjectCard>
+        <ProjectCard
+          fadeInDelay={600}
           youtubeLink="https://youtu.be/LJU1tSHsynk"
           githubLink="https://github.com/tomdenboon/Archedetector"
-          title="Archedetector ( API )"
+          title="Archedetector API"
           tags={["Java", "Spring Boot", "PostgreSQL"]}
         >
           Created an api for the{" "}
@@ -42,10 +69,10 @@ function Projects(props) {
           research.
         </ProjectCard>
         <ProjectCard
-          fadeInDelay={500}
+          fadeInDelay={700}
           githubLink="https://github.com/tomdenboon/Archedetector-site"
           youtubeLink="https://youtu.be/LJU1tSHsynk"
-          title="Archedetector ( Frontend )"
+          title="Archedetector WebUI"
           tags={["Vue.js", "Bootstrap", "CSS"]}
         >
           Made a web interface for the api of the{" "}
@@ -62,7 +89,7 @@ function Projects(props) {
           styling.
         </ProjectCard>
         <ProjectCard
-          fadeInDelay={600}
+          fadeInDelay={800}
           githubLink="https://github.com/tomdenboon/tom-site"
           youtubeLink=""
           title="Portfolio"
@@ -70,7 +97,8 @@ function Projects(props) {
         >
           Website used to showcase my projects. I created it by, taking
           inspiration from other portfolio's and then building and designing the
-          components myself.
+          components myself. This project supports react routing, redux, and
+          themes (click smiley on homepage).
         </ProjectCard>
       </div>
     </div>

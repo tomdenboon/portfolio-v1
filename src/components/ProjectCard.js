@@ -51,7 +51,7 @@ function ProjectCard(props) {
 
   function ProjectCardFooter() {
     return (
-      <div className="flex flex-wrap text-text-darkest font-mono font-thin text-sm gap-x-4 gap-y-1 mt-auto">
+      <div className="flex flex-wrap text-text-darkest font-mono font-thin text-sm gap-x-5 gap-y-1 mt-auto">
         {props.tags.map((tag, i) => {
           return <div key={i}>{tag}</div>;
         })}

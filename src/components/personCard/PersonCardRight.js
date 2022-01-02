@@ -16,7 +16,7 @@ function PersonCardRight() {
       delay={isMobile ? "600" : "400"}
       waitForNavbar={true}
     >
-      <div className="flex flex-col justify-between items-center h-full w-full bg-primary p-8">
+      <div className="flex flex-col justify-center items-center h-full w-full bg-primary p-8">
         <Link to="/projects">
           <CustomButton title="Projects" />
         </Link>

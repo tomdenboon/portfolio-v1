@@ -1,7 +1,7 @@
 import React from "react";
 import HoverUpWrapper from "./wrappers/HoverUpWrapper";
 import FadeInAnimationWrapper from "./wrappers/FadeInAnimationWrapper";
-import { FiGithub, FiFolder, FiYoutube } from "react-icons/fi";
+import { FiGithub, FiFolder, FiYoutube, FiExternalLink } from "react-icons/fi";
 
 function ProjectCard(props) {
   function ProjectCardOuter(props) {
@@ -26,7 +26,17 @@ function ProjectCard(props) {
           <FiFolder className="stroke-current stroke-1" />
         </div>
         <div className="flex gap-8">
-          {props.youtubeLink !== "" && (
+          {props.siteLink && (
+            <a
+              href={props.siteLink}
+              target="_blank"
+              rel="noreferrer"
+              className=" text-2xl text-text-darkest hover:text-secondary transition ease-in-out duration-200"
+            >
+              <FiExternalLink />
+            </a>
+          )}
+          {props.youtubeLink && (
             <a
               href={props.youtubeLink}
               target="_blank"

@@ -2,7 +2,7 @@ import React from "react";
 import ProjectCard from "./ProjectCard";
 import FadeInAnimationWrapper from "./wrappers/FadeInAnimationWrapper";
 
-function Projects(props) {
+function Projects() {
   return (
     <div className="h-screen overflow-y-auto flex flex-col items-center pb-16 mt-16">
       <div className="flex">
@@ -20,30 +20,32 @@ function Projects(props) {
       <div className="max-w-screen-xl grid xl:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 grid-flow-row auto-rows-max">
         <ProjectCard
           fadeInDelay={400}
+          siteLink="https://monkey-log.herokuapp.com/"
           githubLink="https://github.com/tomdenboon/monkey-log-api"
-          youtubeLink=""
           title="MonkeyLog API"
           tags={["PHP", "Laravel"]}
         >
           Created an API for a fully functional workout logger. With MonkeyLog
           API users have all their workout data in the cloud, accessible from
-          anywhere on any device. With the API you can: Create exercises, Create
-          template workouts with the exercises. Start a workout and track your
-          sets. See your previous workouts. Future features include: Widget
-          statistics which lets the user select what data/graphs they want to
-          see on their statistics page, customizable settings, and much more.
+          anywhere on any device. With the API you can: Create exercises, create
+          workouts. Start a workout and track your sets. See your previous
+          workouts. Future features include: Widget statistics which lets the
+          user select what data/graphs they want to see on their statistics
+          page, customizable settings, and much more.
         </ProjectCard>
         <ProjectCard
           fadeInDelay={500}
+          siteLink="https://monkey-log.herokuapp.com/"
           githubLink="https://github.com/tomdenboon/monkey-log"
-          youtubeLink=""
           title="MonkeyLog WebUI"
           tags={["React", "Tailwind"]}
         >
           MonkeyLog is a workout logger which helps users track their workouts.
           The UI was primarily designed for mobile first, whilst still looking
-          good on other devices. This project is still regularly being updated
-          since there are always improvements or new features to be added.
+          good on other devices. User Experience and responsitivity are
+          priorities for this project. This project is still regularly being
+          updated since there are always improvements or new features to be
+          added.
         </ProjectCard>
         <ProjectCard
           fadeInDelay={600}
@@ -91,7 +93,6 @@ function Projects(props) {
         <ProjectCard
           fadeInDelay={800}
           githubLink="https://github.com/tomdenboon/tom-site"
-          youtubeLink=""
           title="Portfolio"
           tags={["React", "Tailwind"]}
         >

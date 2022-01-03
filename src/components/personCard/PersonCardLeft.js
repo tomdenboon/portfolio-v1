@@ -19,12 +19,12 @@ function PersonCardRight() {
         </div>
         <div className="text-text-base text-xl font-bold">I am Tom!</div>
         <div className="w-full flex">
-          A freshly graduated computing scientist. Excited to bring my value to
-          your company. Here are a few points that encapsulate myself well.
+          A freshly graduated Bsc computing scientist. Excited to bring my value
+          to your company. Here are a few points that encapsulate myself well.
         </div>
         <div className="w-full flex">
           <div className="h-2 w-2 mt-2 mr-4 bg-secondary flex-shrink-0" />
-          Enthusiatic to always improve myself.
+          Enthusiastic to always improve myself.
         </div>
         <div className="w-full flex">
           <div className="h-2 w-2 mt-2 mr-4 bg-secondary flex-shrink-0" />I like
@@ -32,7 +32,7 @@ function PersonCardRight() {
         </div>
         <div className="w-full flex">
           <div className="h-2 w-2 mt-2 mr-4 bg-secondary flex-shrink-0" />
-          Once I start solving a problem, I can not stop until solved.
+          Once I start with a problem, I can not stop until solved.
         </div>
         <div className="w-full flex">
           <div className="h-2 w-2 mt-2 mr-4 bg-secondary flex-shrink-0" />A

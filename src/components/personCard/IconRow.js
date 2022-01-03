@@ -4,8 +4,8 @@ import HoverUpWrapper from "../wrappers/HoverUpWrapper";
 
 function IconRow() {
   return (
-    <div className="flex mt-5 text-xl text-text-darkest">
-      <div className="hover:text-secondary m-2">
+    <div className="flex mt-5 text-xl text-text-dark">
+      <div className="hover:text-text-base m-2">
         <a
           href="https://github.com/tomdenboon"
           target="_blank"
@@ -16,7 +16,7 @@ function IconRow() {
           </HoverUpWrapper>
         </a>
       </div>
-      <div className="hover:text-secondary m-2">
+      <div className="hover:text-text-base m-2">
         <a
           href="mailto:tomdenboon@hotmail.com?subject=Your inquiry"
           target="_blank"

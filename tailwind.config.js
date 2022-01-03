@@ -126,6 +126,7 @@ module.exports = {
         "fade-in-right-delay-200": "fade-in-right 0.3s ease-in 0.2s both",
         "fade-in-right-delay-300": "fade-in-right 0.3s ease-in 0.3s both",
         "fade-in-right-delay-400": "fade-in-right 0.3s ease-in 0.4s both",
+        "fade-in-right-delay-500": "fade-in-right 0.3s ease-in 0.5s both",
         "fade-in-right-delay-700": "fade-in-right 0.3s ease-in 0.7s both",
         "fade-in-right-delay-800": "fade-in-right 0.3s ease-in 0.8s both",
         "fade-in-right-delay-900": "fade-in-right 0.3s ease-in 0.9s both",

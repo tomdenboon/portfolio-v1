@@ -23,9 +23,6 @@ function App() {
           <Route path="/projects">
             <Projects />
           </Route>
-          <Route path="/contact">
-            <Projects />
-          </Route>
         </Switch>
       </div>
     </Router>

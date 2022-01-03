@@ -18,8 +18,8 @@ function PersonCardMiddle() {
   };
 
   return (
-    <FadeInAnimationWrapper direction="up" delay="400" waitForNavbar={true}>
-      <div className="flex flex-col h-full w-full lg:w-min justify-center items-center p-8 bg-primary">
+    <FadeInAnimationWrapper direction="left" delay="400" waitForNavbar={true}>
+      <div className="flex flex-col h-full w-full lg:w-min justify-center items-center p-10 bg-secondary">
         <div
           className="flex items-center justify-center text-secondary bg-primary-dark rounded-full
            sm:h-48 sm:w-48 h-36 w-36 sm:text-8xl text-7xl cursor-pointer"

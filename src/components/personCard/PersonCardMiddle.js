@@ -2,11 +2,15 @@ import React, { useState } from "react";
 import { FaGrin, FaGrinWink } from "react-icons/fa";
 import { useDispatch } from "react-redux";
 import { nextTheme } from "../../actions";
+import { useMediaQuery } from "react-responsive";
 import IconRow from "./IconRow";
 import FadeInAnimationWrapper from "../wrappers/FadeInAnimationWrapper";
 
 function PersonCardMiddle() {
   const dispatch = useDispatch();
+  const isMobile = useMediaQuery({
+    query: "(min-width: 768px)",
+  });
   const [isHoveredSmiley, setIsHoveredSmiley] = useState(false);
 
   const toggleHover = () => {
@@ -18,16 +22,19 @@ function PersonCardMiddle() {
   };
 
   return (
-    <FadeInAnimationWrapper direction="left" delay="400" waitForNavbar={true}>
+    <FadeInAnimationWrapper
+      direction={isMobile ? "left" : "up"}
+      delay="400"
+      waitForNavbar={true}
+    >
       <div className="flex flex-col h-full w-full lg:w-min justify-center items-center p-10 bg-secondary">
         <div
-          className="flex items-center justify-center text-secondary bg-primary-dark rounded-full
-           sm:h-48 sm:w-48 h-36 w-36 sm:text-8xl text-7xl cursor-pointer"
+          className="flex items-center justify-center text-secondary bg-primary-dark h-48 w-48 text-8xl cursor-pointer rounded-full"
           onMouseEnter={toggleHover}
           onMouseLeave={toggleHover}
           onClick={switchTheme}
         >
-          <div className="flex">
+          <div className="flex w-full h-full items-center justify-center bg-primary-dark rounded-full">
             {isHoveredSmiley ? <FaGrinWink /> : <FaGrin />}
           </div>
         </div>

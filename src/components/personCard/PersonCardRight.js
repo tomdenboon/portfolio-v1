@@ -7,9 +7,16 @@ import FadeInAnimationWrapper from "../wrappers/FadeInAnimationWrapper";
 
 function PersonCardRight() {
   const timer = useSelector((state) => state.timer);
+  const isMobile = useMediaQuery({
+    query: "(min-width: 768px)",
+  });
 
   return (
-    <FadeInAnimationWrapper direction="right" delay="400" waitForNavbar={true}>
+    <FadeInAnimationWrapper
+      direction={isMobile ? "right" : "up"}
+      delay={isMobile ? "400" : "600"}
+      waitForNavbar={true}
+    >
       <div className="flex flex-col h-full w-full bg-primary p-10 gap-4 text-text-dark">
         <h3 className="font-bold text-secondary">Curious?</h3>
         <p className=" text-text-base text-xl font-bold">

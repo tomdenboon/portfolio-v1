@@ -4,7 +4,7 @@ import CustomButton1 from "./CustomButton";
 import { NavLink } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { isNavbarLoaded } from "../actions";
-import Cv from "../content/cv.pdf";
+import Cv from "../content/resume.pdf";
 import { FiMenu } from "react-icons/fi";
 
 function Navbar() {

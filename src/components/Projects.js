@@ -52,7 +52,7 @@ function Projects() {
           youtubeLink="https://youtu.be/LJU1tSHsynk"
           githubLink="https://github.com/tomdenboon/Archedetector"
           title="Archedetector API"
-          tags={["Java", "Spring Boot", "PostgreSQL"]}
+          tags={["Java", "Spring Boot", "PostgreSQL", "Lucene"]}
         >
           Created an api for the{" "}
           <a

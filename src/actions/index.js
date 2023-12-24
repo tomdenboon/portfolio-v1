@@ -1,16 +1,8 @@
-export const UPDATE = 'UPDATE';
-export const update = (time) => {
+export const SET_TIME = 'SET_TIME';
+export const setTime = (time) => {
   return {
-    type: UPDATE,
-    payload: { time },
-  };
-};
-
-export const NAVBAR_LOADED = 'NAVBAR_LOADED';
-export const isNavbarLoaded = (isLoaded) => {
-  return {
-    type: NAVBAR_LOADED,
-    payload: { isLoaded },
+    type: SET_TIME,
+    payload: time,
   };
 };
 

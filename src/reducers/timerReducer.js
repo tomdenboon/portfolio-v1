@@ -1,10 +1,10 @@
 // Import all of our actions
-import { UPDATE } from "../actions";
+import { UPDATE } from '../actions';
 
-const timerReducer = (state = { name: "The Timer", time: 0 }, action) => {
+const timerReducer = (state = { time: 0 }, action) => {
   switch (action.type) {
     case UPDATE:
-      return { ...state, time: (state.time += action.payload.deltaTime) };
+      return { ...state, time: action.payload.time };
     default:
       return state;
   }

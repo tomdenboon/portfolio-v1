@@ -1,7 +1,6 @@
-import React from "react";
-import PersonCardLeft from "./PersonCardLeft";
-import PersonCardRight from "./PersonCardRight";
-import PersonCardMiddle from "./PersonCardMiddle";
+import PersonCardLeft from './PersonCardLeft';
+import PersonCardRight from './PersonCardRight';
+import PersonCardMiddle from './PersonCardMiddle';
 
 function PersonCard() {
   return (
@@ -12,7 +11,6 @@ function PersonCard() {
       <div className="flex order-1 md:order-1">
         <PersonCardMiddle />
       </div>
-
       <div className="flex w-full order-3">
         <PersonCardRight />
       </div>

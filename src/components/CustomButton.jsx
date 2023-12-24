@@ -1,6 +1,4 @@
-import React from "react";
-
-function CustomButton1(props) {
+function Button(props) {
   return (
     <button
       className="relative text-text-base hover:text-secondary
@@ -16,4 +14,4 @@ function CustomButton1(props) {
   );
 }
 
-export default CustomButton1;
+export default Button;

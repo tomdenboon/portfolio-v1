@@ -1,22 +1,20 @@
-import React from "react";
-import { useMediaQuery } from "react-responsive";
-import { Link } from "react-router-dom";
-import { formatTime } from "../../utils";
-import { useSelector } from "react-redux";
-import FadeInAnimationWrapper from "../wrappers/FadeInAnimationWrapper";
-import Cv from "../../content/resume.pdf";
+import { useMediaQuery } from 'react-responsive';
+import { Link } from 'react-router-dom';
+import { formatTime } from '../../utils/formatTime';
+import { useSelector } from 'react-redux';
+import FadeInAnimationWrapper from '../wrappers/FadeInAnimationWrapper';
+import Cv from '../../assets/resume.pdf';
 
 function PersonCardRight() {
   const timer = useSelector((state) => state.timer);
   const isMobile = useMediaQuery({
-    query: "(min-width: 768px)",
+    query: '(min-width: 768px)',
   });
 
   return (
     <FadeInAnimationWrapper
-      direction={isMobile ? "right" : "up"}
-      delay={isMobile ? "400" : "600"}
-      waitForNavbar={true}
+      direction={isMobile ? 'right' : 'up'}
+      delay={isMobile ? 100 : 300}
     >
       <div className="flex flex-col h-full w-full bg-primary p-10 gap-4 text-text-dark">
         <h3 className="font-bold text-secondary">Curious?</h3>

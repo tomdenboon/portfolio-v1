@@ -1,9 +1,7 @@
 function Button(props) {
   return (
     <button
-      className="relative text-text-base hover:text-secondary
-      border rounded select-none bg-opacity-0 
-      border-text-base hover:border-secondary transform duration-200"
+      className={`relative text-text-base hover:text-secondary border rounded select-none bg-opacity-0 border-text-base hover:border-secondary transform duration-200 ${props.className}`}
     >
       <div
         className="absolute bg-secondary w-full h-full 

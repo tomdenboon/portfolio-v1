@@ -6,6 +6,7 @@ import FadeInAnimationWrapper from '../wrappers/FadeInAnimationWrapper';
 import Cv from '../../assets/resume.pdf';
 import { setTime } from '../../actions';
 import { useEffect, useMemo, useState } from 'react';
+import Button from '../CustomButton';
 
 function PersonCardRight() {
   const dispatch = useDispatch();
@@ -44,32 +45,14 @@ function PersonCardRight() {
           In my portfolio are the projects I am most proud off. Some of them are
           still being updated regularly.
         </p>
-        <Link
-          to="/projects"
-          className="relative flex items-center justify-center text-text-base hover:text-secondary group
-          border rounded-lg select-none bg-opacity-0 duration-200
-          border-text-base hover:border-secondary w-full py-1 mt-2"
-        >
-          <div
-            className="absolute bg-secondary w-full h-full duration-200
-            rounded transform opacity-0 group-hover:opacity-10"
-          />
-          <div className="text-lg">Projects</div>
-        </Link>
-        <a
-          href={Cv}
-          target="_blank"
-          rel="noreferrer"
-          className="relative flex items-center justify-center text-text-base hover:text-secondary group transform duration-200 
-          border rounded-lg select-none bg-opacity-0 
-          border-text-base hover:border-secondary w-full py-1 mt-2"
-        >
-          <div
-            className="absolute bg-secondary w-full h-full
-            rounded transform opacity-0 group-hover:opacity-10 duration-200"
-          />
-          <div className="text-lg">Resume</div>
-        </a>
+        <div className="flex gap-2">
+          <Link to="/projects">
+            <Button title="Projects" />
+          </Link>
+          <a href={Cv} target="_blank" rel="noreferrer">
+            <Button title="Resume" />
+          </a>
+        </div>
         <div className="mt-auto">
           Time on portfolio:{' '}
           <span className=" text-secondary">{formatTime(timer)}</span>

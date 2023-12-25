@@ -15,6 +15,7 @@ export default {
     extend: {
       padding: ['hover'],
       opacity: ['active'],
+      'bg-opacity': ['hover'],
       textColor: ['active'],
       translate: ['group-hover'],
       borderRadius: ['hover', 'focus'],

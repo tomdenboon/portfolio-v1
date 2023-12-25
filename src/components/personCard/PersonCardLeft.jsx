@@ -32,12 +32,12 @@ function PersonCardRight() {
         <div className="w-full flex">
           A passionate software engineer, I love clean code and beautiful
           solutions. Excited to bring my value to your company. Here are a few
-          points that encapsulate myself well.
+          overly generic points that encapsulate myself.
         </div>
-        <BulletPoint text="I am a team player." />
-        <BulletPoint text="I am a fast learner." />
-        <BulletPoint text="I am a hard worker." />
-        <BulletPoint text="I am a problem solver." />
+        <BulletPoint text="Team Player" />
+        <BulletPoint text="Fast Learner" />
+        <BulletPoint text="Hard Worker" />
+        <BulletPoint text="Problem Solver" />
       </div>
     </FadeInAnimationWrapper>
   );
